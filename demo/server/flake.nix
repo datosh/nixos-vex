@@ -3,8 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # TODO: change to github:datosh/nixos-vex once the repository is public.
-    nixos-vex.url = "git+ssh://git@github.com/datosh/nixos-vex";
+    nixos-vex.url = "github:datosh/nixos-vex";
   };
 
   outputs =
