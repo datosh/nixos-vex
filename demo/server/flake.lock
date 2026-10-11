@@ -83,32 +83,32 @@
         "sbomnix": "sbomnix"
       },
       "locked": {
-        "lastModified": 1791287609,
-        "narHash": "sha256-geFJ1ByfZWIFOEmGkz5Dsod7nC4IoLtlalJPyk9b0KA=",
-        "ref": "refs/heads/main",
-        "rev": "76e1ed218e46d28eccd41b67559d5673bcadd87e",
-        "revCount": 7,
-        "type": "git",
-        "url": "ssh://git@github.com/datosh/nixos-vex"
+        "lastModified": 1791737571,
+        "narHash": "sha256-phg6QAC5By06/kybzW7IWYiKuo5btB9OLvhejn3+A+Y=",
+        "owner": "datosh",
+        "repo": "nixos-vex",
+        "rev": "964e791b287f872b9ad752a899052bbb4f5f9af3",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/datosh/nixos-vex"
+        "owner": "datosh",
+        "repo": "nixos-vex",
+        "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1790822859,
-        "narHash": "sha256-69xHQhAeMAD2wDXO7T2pcOZIF9Sga2W+JkmY2a11Ops=",
+        "lastModified": 1791456040,
+        "narHash": "sha256-H83yz/do+hjOO0uujHyH8RgtIQP2v7Mw+cLwcZK/xKc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
+        "rev": "e7439b6b14ad3cc35d05608ebca9bce01a25f5f8",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
-        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
         "type": "github"
       }
     },
@@ -129,17 +129,17 @@
     },
     "nixpkgs-tools": {
       "locked": {
-        "lastModified": 1790822859,
-        "narHash": "sha256-69xHQhAeMAD2wDXO7T2pcOZIF9Sga2W+JkmY2a11Ops=",
+        "lastModified": 1791456040,
+        "narHash": "sha256-H83yz/do+hjOO0uujHyH8RgtIQP2v7Mw+cLwcZK/xKc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
+        "rev": "e7439b6b14ad3cc35d05608ebca9bce01a25f5f8",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
-        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
         "type": "github"
       }
     },
@@ -191,17 +191,16 @@
         "vulnix": "vulnix"
       },
       "locked": {
-        "lastModified": 1787661178,
-        "narHash": "sha256-B63Uy/ReydVMMFFu+8dsHdKhTlCcvsMYihD4WmiBqbw=",
+        "lastModified": 1791525714,
+        "narHash": "sha256-Glx0Y0WU/7GgH3pnW3ymqsTI8R/+vOMF23PW7n1GeP0=",
         "owner": "tiiuae",
         "repo": "sbomnix",
-        "rev": "638e4006fa851c94d6517c010a6b3c2c2b1b8a9b",
+        "rev": "7186e77aad947613ecc88aeccb260ceeb98cb6d8",
         "type": "github"
       },
       "original": {
         "owner": "tiiuae",
         "repo": "sbomnix",
-        "rev": "638e4006fa851c94d6517c010a6b3c2c2b1b8a9b",
         "type": "github"
       }
     },

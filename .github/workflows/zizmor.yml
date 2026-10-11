@@ -28,8 +28,5 @@ jobs:
         uses: zizmorcore/zizmor-action@cc914d7f3750a2d13d75c7f184a1060aa0e9d482 # v0.6.4
         with:
           persona: auditor
-          # Code scanning needs GitHub Advanced Security on a private
-          # repository. Until the repository is public, findings are
-          # annotations and fail this job; then switch to SARIF upload.
           advanced-security: false
           annotations: true
