@@ -1,0 +1,60 @@
+name: zero
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions: {}
+
+concurrency:
+  group: zero-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  zero:
+    name: Zero untriaged
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read # check out the repository (full history: the base feed)
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@13d8dd58da0234aa297dedd986986ccb8e7f3e24 # v31.11.1
+        with:
+          github_access_token: ${{ github.token }}
+
+      - name: Zero gate (SBOM check, scan, zero untriaged)
+        run: make gate
+
+      - name: Keep the regenerated SBOM for inspection
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: regenerated-sbom
+          path: reports/regenerated-baseline.cdx.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Impact against the base branch
+        if: ${{ always() && github.event_name == 'pull_request' }}
+        # Informational: the gate above decides.
+        continue-on-error: true
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          feed() { nix build --no-link --print-out-paths "$1#nixosConfigurations.baseline.config.system.build.vexFeed"; }
+          base_feed="$(feed "git+file://$PWD?rev=$BASE_SHA")"
+          head_feed="$(feed .)"
+          git show "$BASE_SHA:vex/baseline.openvex.json" > reports/base-source.openvex.json
+          nix shell .#grype -c grype -q sbom:reports/regenerated-baseline.cdx.json --vex "$base_feed" -o json=reports/base.vulns.json
+          nix develop .#ci -c python3 scripts/impact.py \
+            --base-report reports/base.vulns.json --base-vex "$base_feed" --base-feed reports/base-source.openvex.json \
+            --head-report reports/baseline.vulns.json --head-vex "$head_feed" --head-feed vex/baseline.openvex.json \
+            >> "$GITHUB_STEP_SUMMARY"

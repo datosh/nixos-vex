@@ -1,0 +1,8 @@
+# Ruff's default rules plus pyupgrade (UP, follows target-version), perflint
+# (PERF) and Ruff's own (RUF); types are basedpyright's job (pyrightconfig.json).
+target-version = "py314"
+line-length = 120
+include = ["scripts/*.py"]
+
+[lint]
+extend-select = ["UP", "PERF", "RUF"]

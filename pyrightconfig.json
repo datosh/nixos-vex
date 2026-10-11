@@ -1,0 +1,12 @@
+{
+  "include": [
+    "scripts"
+  ],
+  "typeCheckingMode": "recommended",
+  "pythonVersion": "3.14",
+  "executionEnvironments": [
+    {
+      "root": "scripts"
+    }
+  ]
+}

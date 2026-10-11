@@ -1,0 +1,104 @@
+name: daily
+
+on:
+  schedule:
+    # After Anchore's daily grype DB build (about 06:30 UTC).
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    name: Scan the reference system
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read # check out the repository
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@13d8dd58da0234aa297dedd986986ccb8e7f3e24 # v31.11.1
+        with:
+          # `nix flake update` resolves inputs through the GitHub API.
+          github_access_token: ${{ github.token }}
+
+      - name: Bump every pin, regenerate the SBOM and scan
+        env:
+          # bump.py reads the head of tiiuae/cpedict through the GitHub API.
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p reports
+          cp flake.lock reports/committed-flake.lock
+          make bump
+
+      - name: Report
+        run: |
+          feed="$(nix build --no-link --print-out-paths .#nixosConfigurations.baseline.config.system.build.vexFeed)"
+          nix develop .#ci -c python3 scripts/daily-report.py baseline \
+            --vex "$feed" \
+            --base-lock reports/committed-flake.lock \
+            --summary reports/summary.md \
+            --issue reports/issue.md
+          cat reports/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Hand the report to the issue job
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: daily-report
+          path: |
+            reports/summary.md
+            reports/issue.md
+          if-no-files-found: error
+          retention-days: 7
+
+  issue:
+    name: Open, update or close the tracking issue
+    needs: scan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      issues: write # open, edit, comment on and close the tracking issue
+    steps:
+      - name: Fetch the report
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: daily-report
+          path: report
+
+      - name: Sync the tracking issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ASSIGNEE: ${{ github.repository_owner }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          title="Untriaged findings (daily scan)"
+          # Only an issue this workflow opened, never one with a copied title.
+          number="$(gh issue list --state open --author "github-actions[bot]" --limit 100 \
+            --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -n1)"
+          key() { grep -o 'nixos-vex-daily-key: [0-9a-f]*' || true; }
+
+          if [ -f report/issue.md ]; then
+            if [ -z "$number" ]; then
+              gh issue create --title "$title" --assignee "$ASSIGNEE" --body-file report/issue.md
+            else
+              old="$(gh issue view "$number" --json body --jq .body | key)"
+              gh issue edit "$number" --body-file report/issue.md
+              # Comment (and so notify) only when what needs a human changed.
+              if [ "$old" != "$(key < report/issue.md)" ]; then
+                gh issue comment "$number" --body "The untriaged findings changed: $RUN_URL"
+              fi
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --comment "Zero untriaged findings: $RUN_URL"
+          fi

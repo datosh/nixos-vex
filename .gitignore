@@ -1,0 +1,7 @@
+reports/
+result
+result-*
+# sbomnix side outputs; only sboms/*.cdx.json is committed
+sboms/*.csv
+sboms/*.spdx.json
+__pycache__

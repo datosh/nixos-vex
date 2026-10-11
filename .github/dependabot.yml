@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # Let a new release age before it is proposed.
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ["*"]
