@@ -1577,13 +1577,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "NVMe passthrough: the device can write more metadata than the user buffer. Since v6.2, passthrough I/O commands need no CAP_SYS_ADMIN, only a file descriptor on the namespace's device node (nvme_cmd_allowed() in drivers/nvme/host/ioctl.c); admin, vendor-specific and fabrics commands still require CAP_SYS_ADMIN. Unprivileged users cannot open those nodes: the generic character nodes /dev/ngXnY keep the kernel's root-only default (systemd's udev rules assign them no group or mode), and the block nodes belong to root:disk, a root-equivalent group. Upstream mitigated it for SGL-capable controllers in 6fad84a4d624 (v6.13, present in 6.18). Applies only while the nixos-vex condition nvme-nodes-privileged holds: a udev rule in services.udev.extraRules that mentions NVMe nodes removes this statement from the generated feed; rules shipped in services.udev.packages are not inspected. Source: https://cveawg.mitre.org/api/cve/CVE-2023-6238. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Versioned purl: unprivileged passthrough exists from v6.2 on, so the verdict is tied to the version. [nixos-vex:condition=nvme-nodes-privileged] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Versioned purl: unprivileged passthrough exists from v6.2 on, so the verdict is tied to the version. [nixos-vex:condition=nvme-nodes-privileged] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6240-linux",
@@ -1928,13 +1931,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "IMA: stack out-of-bounds in is_bprm_creds_for_exec(). The function is in security/integrity/ima/ima_appraise.c, built only with CONFIG_IMA_APPRAISE, which is not set in the nixpkgs kernel config. Source: https://cveawg.mitre.org/api/cve/CVE-2025-71306. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2025-71308-linux",
@@ -1970,13 +1976,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "PCI: endpoint: Add missing NULL check for alloc_workqueue(). drivers/pci/endpoint/functions/pci-epf-ntb.c: needs CONFIG_PCI_EPF_NTB (not set); drivers/pci/endpoint/functions/pci-epf-vntb.c: needs CONFIG_PCI_EPF_VNTB (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2025-71313. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-0861-glibc",
@@ -2302,13 +2311,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "blktrace: __this_cpu_read/write in preemptible context. The code runs only while the blk tracer is enabled (root, via tracefs) or a blktrace session is set up on an opened block device (root or the disk group). No unprivileged path. Source: https://cveawg.mitre.org/api/cve/CVE-2026-23374. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23377-linux",
@@ -2435,13 +2447,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "net: ti: icssg-prueth: fix use-after-free of CPPI descriptor in RX path. drivers/net/ethernet/ti/icssg/icssg_common.c: needs CONFIG_TI_ICSSG_PRUETH (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-31501. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31560-linux",
@@ -2797,13 +2812,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "mshv: error handling in mshv_region_pin(). Neither drivers/hv/mshv_regions.c nor mshv_region_pin() exists in 6.18.54; the 6.18 equivalents in drivers/hv/mshv_root_main.c already advance by the pinned count and unpin on error. The CNA record's affected range (from 6.15) does not match the 6.18 code layout. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43045. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: drivers/hv/mshv_regions.c still does not exist and drivers/hv/mshv_root_main.c is unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43053-linux",
@@ -2827,16 +2845,19 @@
         "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-43095",
         "name": "CVE-2026-43095"
       },
-      "last_updated": "2026-10-09T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z",
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "The flaw is that SDCA interrupts requested with devm_request_threaded_irq() from component probe (sdca_irq_populate() in sound/soc/sdca/sdca_interrupts.c) outlive a torn-down sound card. Upstream, the only caller is the SDCA class function driver (sound/soc/sdca/sdca_class_function.c), which 6.18 does not have: the 6.18.55 sound/soc/sdca/Makefile builds no such file, and no driver in the 6.18.55 tree calls sdca_irq_populate(), sdca_irq_request() or sdca_irq_allocate(), so the IRQs are never requested. The fix ('ASoC: SDCA: Fix errors in IRQ cleanup', mainline 4e53116437e9, 6.19.14) is not in 6.18.55. Sources: https://cveawg.mitre.org/api/cve/CVE-2026-43095, https://git.kernel.org/stable/c/4e53116437e919c4b9a9d95fb73ae14fe0cfc8f9.",
-      "status_notes": "Depends on what nixpkgs' kernel builds (an added out-of-tree or patched SDCA driver could call it). [nixos-vex:condition=stock-kernel]"
+      "status_notes": "Depends on what nixpkgs' kernel builds (an added out-of-tree or patched SDCA driver could call it). [nixos-vex:condition=stock-kernel] Later versions in products: re-checked at 6.18.56: the SDCA code is unchanged and no driver gains a call to sdca_irq_populate(), sdca_irq_request() or sdca_irq_allocate()."
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43115-linux",
@@ -2850,13 +2871,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "srcu: Use irq_work to start GP in tiny SRCU. kernel/rcu/srcutiny.c: needs CONFIG_TINY_SRCU (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43115. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43131-linux",
@@ -2893,13 +2917,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "io_uring zcrx: post-open error handling. Registering a zero-copy receive queue requires capable(CAP_NET_ADMIN) in the initial user namespace (io_uring/zcrx.c), so user namespaces do not grant it. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43174. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: io_uring/zcrx.c changes only the receive path (io_zcrx_recv_skb(), io_zcrx_tcp_recvmsg()); registering a zero-copy receive queue still requires capable(CAP_NET_ADMIN).",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43191-linux",
@@ -2935,13 +2962,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "ASoC: qcom: q6asm: drop DSP responses for closed data streams. sound/soc/qcom/qdsp6/q6asm.c: needs CONFIG_SND_SOC_QDSP6_ASM (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43204. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43228-linux",
@@ -3003,13 +3033,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "media: verisilicon: Avoid G2 bus error while decoding H.264 and HEVC. drivers/media/platform/verisilicon/hantro_drv.c: needs CONFIG_VIDEO_HANTRO (not set); drivers/media/platform/verisilicon/imx8m_vpu_hw.c: needs CONFIG_VIDEO_HANTRO_IMX8M (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43310. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43311-linux",
@@ -3023,13 +3056,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "soc/tegra: pmc: Fix unsafe generic_handle_irq() call. drivers/soc/tegra/pmc.c: needs CONFIG_SOC_TEGRA_PMC (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43311. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43326-linux",
@@ -3043,13 +3079,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "sched_ext: SCX_KICK_WAIT deadlock. Requires a loaded sched_ext BPF scheduler, which only root (CAP_BPF and CAP_PERFMON for STRUCT_OPS) can load; none is loaded by default. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43326. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43344-linux",
@@ -3265,13 +3304,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "DAMON: damos_walk() vs kdamond_fn() exit race. damos_walk() is called only from the DAMON sysfs interface, whose attributes are root-only (0600); the built-in DAMON modules (reclaim, lru_sort, stat) are disabled by default. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46008. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: mm/damon/core.c changes only scheme application (damos_skip_charged_region(), damos_adjust_quota()); damos_walk() and the root-only DAMON sysfs files are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46017-linux",
@@ -3435,13 +3477,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "media: iris: fix use-after-free of fmt_src during MBPF check. drivers/media/platform/qcom/iris/iris_vdec.c: needs CONFIG_VIDEO_QCOM_IRIS (not set); drivers/media/platform/qcom/iris/iris_venc.c: needs CONFIG_VIDEO_QCOM_IRIS (not set); drivers/media/platform/qcom/iris/iris_vidc.c: needs CONFIG_VIDEO_QCOM_IRIS (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-46210. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46245-linux",
@@ -3498,13 +3543,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "pseries/papr-hvpipe: Fix race with interrupt handler. all program files are under non-x86 arch/ trees: arch/powerpc/platforms/pseries/papr-hvpipe.c. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46298. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux.",
-      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the program files are still powerpc-only and unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46302-linux",
@@ -3943,13 +3991,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "bpf: deleting local storage from NMI context. Requires a tracing or perf_event BPF program (CAP_BPF and CAP_PERFMON); unprivileged BPF is disabled by default (CONFIG_BPF_UNPRIV_DEFAULT_OFF=y), and the program types available without privilege cannot run in NMI context. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53106. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53108-linux",
@@ -3963,13 +4014,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "powerpc/64s: Fix unmap race with PMD migration entries. all program files are under non-x86 arch/ trees: arch/powerpc/mm/book3s64/pgtable.c. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53108. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux.",
-      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the program files are still powerpc-only and unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53113-linux",
@@ -4149,15 +4203,19 @@
         "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-53292",
         "name": "CVE-2026-53292"
       },
-      "last_updated": "2026-10-09T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z",
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
-      "impact_statement": "The BUG_ON() is in pn_socket_autobind() in net/phonet/socket.c (phonet module, CONFIG_PHONET=m), reached from sendmsg on a Phonet socket. pn_socket_create() in net/phonet/af_phonet.c refuses to create Phonet sockets without CAP_SYS_ADMIN in the initial user namespace (capable()), so only root can reach the assertion, and root can crash the kernel anyway. No 6.18.y release up to 6.18.55 carries the fix; upstream fixed it in 7.0.10 and mainline commit 5b0c911bcdbd (CNA record https://cveawg.mitre.org/api/cve/CVE-2026-53292)."
+      "impact_statement": "The BUG_ON() is in pn_socket_autobind() in net/phonet/socket.c (phonet module, CONFIG_PHONET=m), reached from sendmsg on a Phonet socket. pn_socket_create() in net/phonet/af_phonet.c refuses to create Phonet sockets without CAP_SYS_ADMIN in the initial user namespace (capable()), so only root can reach the assertion, and root can crash the kernel anyway. No 6.18.y release up to 6.18.55 carries the fix; upstream fixed it in 7.0.10 and mainline commit 5b0c911bcdbd (CNA record https://cveawg.mitre.org/api/cve/CVE-2026-53292).",
+      "status_notes": "Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged."
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53308-linux",
@@ -4165,16 +4223,19 @@
         "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-53308",
         "name": "CVE-2026-53308"
       },
-      "last_updated": "2026-10-09T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z",
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "The workqueue leak and removal-order use-after-free are in drivers/power/supply/max77705_charger.c (CONFIG_CHARGER_MAX77705=m), the charger cell of the Maxim MAX77705 PMIC found in ARM phones. The charger is instantiated only as a child of the max77705 I2C MFD device, and both drivers match only device-tree compatibles (maxim,max77705 and maxim,max77705-charger); x86_64 systems describe hardware through ACPI, so the driver never probes. No 6.18.y release up to 6.18.55 carries the fix; upstream fixed it in 7.0.10 and mainline commit 1e668baadefb (CNA record https://cveawg.mitre.org/api/cve/CVE-2026-53308).",
-      "status_notes": "[nixos-vex:condition=x86-64]"
+      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: re-checked at 6.18.56: the charger and MFD drivers are unchanged and still match only device-tree compatibles."
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53313-linux",
@@ -4209,13 +4270,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "fbdev: omap2: fix use-after-free in omapfb_mmap. drivers/video/fbdev/omap2/omapfb/omapfb-main.c: needs CONFIG_FB_OMAP2 (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-53401. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-55199-libssh2",
@@ -4528,13 +4592,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "netfilter x_tables: hook ops allocated outside the table mutex. xt_hook_ops_alloc() is compiled into x_tables, but its only callers are the legacy table modules (iptable_filter/mangle/raw/security, ip6table_filter/mangle/raw/security, arptable_filter). The nixpkgs kernel is built without CONFIG_NETFILTER_XTABLES_LEGACY, so none of those modules exists; iptables-nft uses nft_compat, which does not call it. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64079. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: x_tables is unchanged, xt_hook_ops_alloc() gains no caller and CONFIG_NETFILTER_XTABLES_LEGACY is still not set.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64082-linux",
@@ -4629,13 +4696,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "drm/msm adreno: reference leak in a6xx_gpu_init(). The msm DRM driver (Qualcomm Adreno GPUs on ARM SoCs) is not built: CONFIG_DRM_MSM does not appear in the x86_64 kernel config and no msm DRM module exists in the build. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64154. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64159-linux",
@@ -5385,12 +5455,275 @@
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "bpf: zero extend the result of an arena 32-bit cmpxchg. Present in Linux 6.18.55 (is_cmpxchg_insn() in kernel/bpf/verifier.c matches BPF_ATOMIC only) and not yet fixed on the 6.18 branch (fixed in 7.2.7 per https://cveawg.mitre.org/api/cve/CVE-2026-98049). Only reachable from a BPF program that uses an arena map, and creating an arena map requires CAP_BPF (or a BPF token an administrator delegated) in map_create() in kernel/bpf/syscall.c, whatever kernel.unprivileged_bpf_disabled says; NixOS grants CAP_BPF to no service by default. nixpkgs ships Linux 6.18.55 at the pinned nixpkgs revision (e7439b6).",
-      "timestamp": "2026-10-08T00:00:00Z"
+      "timestamp": "2026-10-08T00:00:00Z",
+      "status_notes": "Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64013-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-64013",
+        "name": "CVE-2026-64013"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "ACPI: button: Fix ACPI GPE handler leak during removal. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-64013. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64019-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-64019",
+        "name": "CVE-2026-64019"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "nvme-pci: fix dma mapping leak on data setup error. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-64019. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64020-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-64020",
+        "name": "CVE-2026-64020"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "nvme-pci: fix dma_vecs leak on p2p memory. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-64020. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-98131-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-98131",
+        "name": "CVE-2026-98131"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "net: stmmac: fix dma mapping leak in stmmac_tso_xmit(). CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-98131. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-98134-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-98134",
+        "name": "CVE-2026-98134"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "bpf: check_cond_jmp_op(): properly infer if register is null. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-98134. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106552-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106552",
+        "name": "CVE-2026-106552"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, do not use recursive sftp downloads (get -R) from untrusted servers.",
+      "status_notes": "sftp(1) client: a malicious server can return paths that make a recursive download write outside the target directory. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106553-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106553",
+        "name": "CVE-2026-106553"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "sshd(8): credentials from a failed GSSAPIAuthentication attempt can persist and become available after a later successful authentication. The GSSAPI authentication code in sshd (auth2-gss.c, gss-serv.c) is compiled only when GSSAPI is defined, which configure does only with --with-kerberos5. The nixpkgs openssh package is built without --with-kerberos5, so sshd has no GSSAPIAuthentication. nixpkgs builds Kerberos support only into the separate openssh-with-gssapi package. Applies only while the nixos-vex condition sshd-no-gssapi holds: an sshd built with GSSAPI/Kerberos support removes this statement from the generated feed. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html).",
+      "status_notes": "Versionless purl deliberate: the verdict rests on a build option of the nixpkgs package, which the sshd-no-gssapi condition checks at evaluation, not on the version. [nixos-vex:condition=sshd-no-gssapi]",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106555-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106555",
+        "name": "CVE-2026-106555"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "sshd(8): GSSAPIAuthentication state from one attempt can carry over to a later attempt. The GSSAPI authentication code in sshd (auth2-gss.c, gss-serv.c) is compiled only when GSSAPI is defined, which configure does only with --with-kerberos5. The nixpkgs openssh package is built without --with-kerberos5, so sshd has no GSSAPIAuthentication. nixpkgs builds Kerberos support only into the separate openssh-with-gssapi package. Applies only while the nixos-vex condition sshd-no-gssapi holds: an sshd built with GSSAPI/Kerberos support removes this statement from the generated feed. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html).",
+      "status_notes": "Versionless purl deliberate: the verdict rests on a build option of the nixpkgs package, which the sshd-no-gssapi condition checks at evaluation, not on the version. [nixos-vex:condition=sshd-no-gssapi]",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106582-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106582",
+        "name": "CVE-2026-106582"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, disable compression where sessions mix trusted and untrusted traffic: services.openssh.settings.Compression = false; for sshd, and Compression no in programs.ssh.extraConfig for the client (the client default is already no).",
+      "status_notes": "ssh(1), sshd(8): with compression enabled, the shared LZ77 dictionary leaks plaintext of one channel to an attacker who controls traffic on another channel of the same session. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106583-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106583",
+        "name": "CVE-2026-106583"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, do not pass usernames from untrusted sources to ssh on the command line; set them with the User directive (programs.ssh.extraConfig) instead.",
+      "status_notes": "ssh(1) client: '$' and '\\' in a username given on the command line can inject shell syntax through ProxyCommand, Match exec and similar %-expansions. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106584-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106584",
+        "name": "CVE-2026-106584"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, give certificate validity intervals in UTC (ssh-keygen -V with times ending in Z).",
+      "status_notes": "ssh-keygen(1): Daylight Saving Time is mishandled when converting dates, so certificates can get an expiry off by up to an hour. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106585-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106585",
+        "name": "CVE-2026-106585"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, disable compression: services.openssh.settings.Compression = false; for sshd, and keep the client default (Compression no).",
+      "status_notes": "ssh(1), sshd(8): decompression does not check that inflated payloads stay within the maximum packet length. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106586-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106586",
+        "name": "CVE-2026-106586"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, keep PermitTunnel at its default (no); NixOS does not set it.",
+      "status_notes": "sshd(8): the authorized_keys restrict keyword did not disable tunnel forwarding. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106587-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106587",
+        "name": "CVE-2026-106587"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, do not override such options with none inside Match blocks in services.openssh.extraConfig.",
+      "status_notes": "sshd(8): some options documented to accept none (e.g. AuthorizedPrincipalsFile) treat it as a file name when set inside a Match block. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-19445-python3",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-19445",
+        "name": "CVE-2026-19445"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/python3@3.14.7"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to CPython 3.14.8 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump).",
+      "status_notes": "ssl: use-after-free of a server-side SSLContext when an sni_callback switches SSLSocket.context and nothing else keeps the original context alive. The PSF CNA record bounds 3.14 as affected < 3.14.8; nixpkgs applies no fix to 3.14.7. At the pinned revision python3 is referenced by nixos-rebuild-ng and systemd-boot's installer script, but the interpreter is not asserted unused.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-19553-python3",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-19553",
+        "name": "CVE-2026-19553"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/python3@3.14.7"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to CPython 3.14.8 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump).",
+      "status_notes": "ssl: SSLContext.wrap_bio() skips hostname verification without error when server_hostname is None although check_hostname is set. The PSF CNA record bounds 3.14 as affected < 3.14.8; nixpkgs applies no fix to 3.14.7. At the pinned revision python3 is referenced by nixos-rebuild-ng and systemd-boot's installer script, but the interpreter is not asserted unused.",
+      "timestamp": "2026-10-16T00:00:00Z"
     }
   ]
 }
