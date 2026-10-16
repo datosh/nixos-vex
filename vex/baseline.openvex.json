@@ -3,8 +3,8 @@
   "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json",
   "author": "Fabian Kammel <fabian@kammel.dev>",
   "timestamp": "2026-10-01T00:00:00Z",
-  "last_updated": "2026-10-09T00:00:00Z",
-  "version": 17,
+  "last_updated": "2026-10-16T00:00:00Z",
+  "version": 18,
   "statements": [
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2000-0006-strace",
@@ -247,11 +247,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "Linux kernel is vulnerable to a heap-based buffer overflow in the fs/ext4/xattr.c:ext4_xattr_set_entry() function. An attacker could exploit this by operating o. Debian security tracker: fixed in linux 4.17.3-1 (sid), upstream 4.17.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2018-10840). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Linux kernel is vulnerable to a heap-based buffer overflow in the fs/ext4/xattr.c:ext4_xattr_set_entry() function. An attacker could exploit this by operating o. Debian security tracker: fixed in linux 4.17.3-1 (sid), upstream 4.17.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2018-10840). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2018-10876-linux",
@@ -265,11 +268,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in Linux kernel in the ext4 filesystem code. A use-after-free is possible in ext4_ext_remove_space() function when mounting and operating a cra. fix commit 8844618d8aa7 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2018-10876). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2018-10882-linux",
@@ -283,11 +289,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in the Linux kernel's ext4 filesystem. A local user can cause an out-of-bound write in in fs/jbd2/transaction.c code, a denial of service, and . fix commit c37e9e013469 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2018-10882). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2018-10902-linux",
@@ -301,11 +310,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "It was found that the raw midi kernel driver does not protect against concurrent access which leads to a double realloc (double free) in snd_rawmidi_input_param. fix commit 39675f7a7c7e (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2018-10902). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2018-14625-linux",
@@ -319,11 +331,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux Kernel where an attacker may be able to have an uncontrolled read to kernel-memory from within a vm guest. A race condition betwee. Debian security tracker: fixed in linux 4.19.9-1 (sid), upstream 4.19.9 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2018-14625). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux Kernel where an attacker may be able to have an uncontrolled read to kernel-memory from within a vm guest. A race condition betwee. Debian security tracker: fixed in linux 4.19.9-1 (sid), upstream 4.19.9 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2018-14625). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2018-6559-linux",
@@ -421,12 +436,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "On systems using a VPN, set networking.firewall.checkReversePath = \"strict\"; (breaks asymmetric routing).",
       "status_notes": "VPN connection inference and injection through the weak-host model; an unfixed design issue. Reachable on systems using a VPN; NetworkManager can configure WireGuard natively, and the NixOS default reverse-path filtering is loose (networking.firewall.checkReversePath = \"loose\", rp_filter = 2). Source: https://cveawg.mitre.org/api/cve/CVE-2019-14899. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2019-3016-linux",
@@ -440,11 +458,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "In a Linux KVM guest that has PV TLB enabled, a process in the guest kernel may be able to read memory locations from another process in the same guest. This pr. Debian security tracker: fixed in linux 5.4.19-1 (sid), upstream 5.4.19 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2019-3016). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "In a Linux KVM guest that has PV TLB enabled, a process in the guest kernel may be able to read memory locations from another process in the same guest. This pr. Debian security tracker: fixed in linux 5.4.19-1 (sid), upstream 5.4.19 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2019-3016). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2019-3819-linux",
@@ -458,11 +479,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain param. Debian security tracker: fixed in linux 4.19.20-1 (sid), upstream 4.19.20 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2019-3819). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain param. Debian security tracker: fixed in linux 4.19.20-1 (sid), upstream 4.19.20 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2019-3819). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2019-3887-linux",
@@ -476,11 +500,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Rregister (MSR) access with nested(=1) virtualization enabled. In that, L1 guest coul. Debian security tracker: fixed in linux 4.19.37-1 (sid), upstream 4.19.37 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2019-3887). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Rregister (MSR) access with nested(=1) virtualization enabled. In that, L1 guest coul. Debian security tracker: fixed in linux 4.19.37-1 (sid), upstream 4.19.37 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2019-3887). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2020-10742-linux",
@@ -494,11 +521,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux kernel. An index buffer overflow during Direct IO write leading to the NFS client to crash. In some cases, a reach out of the inde. Debian security tracker: fixed in linux 3.16.2-2 (sid), upstream 3.16.2 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2020-10742). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux kernel. An index buffer overflow during Direct IO write leading to the NFS client to crash. In some cases, a reach out of the inde. Debian security tracker: fixed in linux 3.16.2-2 (sid), upstream 3.16.2 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2020-10742). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2020-16119-linux",
@@ -512,11 +542,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a lis. Debian security tracker: fixed in linux 5.14.6-1 (sid), upstream 5.14.6 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2020-16119). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a lis. Debian security tracker: fixed in linux 5.14.6-1 (sid), upstream 5.14.6 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2020-16119). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2020-1749-linux",
@@ -530,11 +563,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux kernel's implementation of some networking protocols in IPsec, such as VXLAN and GENEVE tunnels over IPv6. When an encrypted tunne. Debian security tracker: fixed in linux 5.4.6-1 (sid), upstream 5.4.6 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2020-1749). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux kernel's implementation of some networking protocols in IPsec, such as VXLAN and GENEVE tunnels over IPv6. When an encrypted tunne. Debian security tracker: fixed in linux 5.4.6-1 (sid), upstream 5.4.6 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2020-1749). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2020-27815-linux",
@@ -548,11 +584,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in the JFS filesystem code in the Linux Kernel which allows a local attacker with the ability to set extended attributes to panic the system, c. fix commit c61b3e483900 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2020-27815). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2020-8834-linux",
@@ -583,11 +622,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "There is a vulnerability in the linux kernel versions higher than 5.2 (if kernel compiled with config params CONFIG_BPF_SYSCALL=y , CONFIG_BPF=y , CONFIG_CGROUP. Debian security tracker: fixed in linux 5.10.19-1 (sid), upstream 5.10.19 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2021-20194). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "There is a vulnerability in the linux kernel versions higher than 5.2 (if kernel compiled with config params CONFIG_BPF_SYSCALL=y , CONFIG_BPF=y , CONFIG_CGROUP. Debian security tracker: fixed in linux 5.10.19-1 (sid), upstream 5.10.19 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2021-20194). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2021-20265-linux",
@@ -601,11 +643,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in the way memory resources were freed in the unix_stream_recvmsg function in the Linux kernel when a signal was pending. This flaw allows an u. fix commit fa0dc04df259 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2021-20265). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2021-3564-linux",
@@ -619,11 +664,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw double-free memory corruption in the Linux kernel HCI device initialization subsystem was found in the way user attach malicious HCI TTY Bluetooth device. Debian security tracker: fixed in linux 5.10.46-1 (sid), upstream 5.10.46 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2021-3564). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw double-free memory corruption in the Linux kernel HCI device initialization subsystem was found in the way user attach malicious HCI TTY Bluetooth device. Debian security tracker: fixed in linux 5.10.46-1 (sid), upstream 5.10.46 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2021-3564). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2021-3714-linux",
@@ -653,11 +701,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A memory overflow vulnerability was found in the Linux kernel’s ipc functionality of the memcg subsystem, in the way a user calls the semget function multiple t. Debian security tracker: fixed in linux 5.15.3-1 (sid), upstream 5.15.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2021-3759). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A memory overflow vulnerability was found in the Linux kernel’s ipc functionality of the memcg subsystem, in the way a user calls the semget function multiple t. Debian security tracker: fixed in linux 5.15.3-1 (sid), upstream 5.15.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2021-3759). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2021-3864-linux",
@@ -703,11 +754,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in the Linux kernel. A null pointer dereference in bond_ipsec_add_sa() may lead to local denial of service.. fix commit 105cd17a8660 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-0286). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-0400-linux",
@@ -721,11 +775,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "SMC: out-of-bounds read of v2_ext_offset in a received proposal message. Fixed upstream by 7863c9f3d24b (first released in v6.13), an ancestor of v6.18. The CVE record has no fix; Red Hat bz#2044575 maps the defect to CVE-2024-49568, which this commit fixes. Source: https://cveawg.mitre.org/api/cve/CVE-2022-0400. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-1247-linux",
@@ -739,11 +796,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "ROSE: race on rose_neigh->use between rose_rt_ioctl and node removal. Fixed upstream by d860d1faa6b2 and its series (dcb34659028f, da9c9c877597) (first released in v6.17), an ancestor of v6.18. Matched by description: no commit cites this CVE ID. Source: https://cveawg.mitre.org/api/cve/CVE-2022-1247. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-2308-linux",
@@ -757,11 +817,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in vDPA with VDUSE backend. There are currently no checks in VDUSE kernel driver to ensure the size of the device config space is in line with . Debian security tracker: fixed in linux 6.0.2-1 (sid), upstream 6.0.2 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-2308). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in vDPA with VDUSE backend. There are currently no checks in VDUSE kernel driver to ensure the size of the device config space is in line with . Debian security tracker: fixed in linux 6.0.2-1 (sid), upstream 6.0.2 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-2308). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-2327-linux",
@@ -789,11 +852,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "An issue was found in the Linux kernel in nf_conntrack_irc where the message handling can be confused and incorrectly matches the message. A firewall may be abl. Debian security tracker: fixed in linux 6.0.2-1 (sid), upstream 6.0.2 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-2663). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "An issue was found in the Linux kernel in nf_conntrack_irc where the message handling can be confused and incorrectly matches the message. A firewall may be abl. Debian security tracker: fixed in linux 6.0.2-1 (sid), upstream 6.0.2 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-2663). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3219-gnupg",
@@ -821,11 +887,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A vulnerability classified as problematic has been found in Linux Kernel. This affects the function fib_nh_match of the file net/ipv4/fib_semantics.c of the com. Debian security tracker: fixed in linux 6.0.12-1 (sid), upstream 6.0.12 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-3435). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A vulnerability classified as problematic has been found in Linux Kernel. This affects the function fib_nh_match of the file net/ipv4/fib_semantics.c of the com. Debian security tracker: fixed in linux 6.0.12-1 (sid), upstream 6.0.12 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-3435). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3523-linux",
@@ -839,11 +908,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability was found in Linux Kernel. It has been classified as problematic. Affected is an unknown function of the file mm/memory.c of the component Drive. fix commit 16ce101db85d (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3523). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3567-linux",
@@ -857,11 +929,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability has been found in Linux Kernel and classified as problematic. This vulnerability affects the function inet6_stream_ops/inet6_dgram_ops of the co. fix commit 364f997b5cfe (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3567). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3619-linux",
@@ -875,11 +950,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A vulnerability has been found in Linux Kernel and classified as problematic. This vulnerability affects the function l2cap_recv_acldata of the file net/bluetoo. Debian security tracker: fixed in linux 6.0.8-1 (sid), upstream 6.0.8 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-3619). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A vulnerability has been found in Linux Kernel and classified as problematic. This vulnerability affects the function l2cap_recv_acldata of the file net/bluetoo. Debian security tracker: fixed in linux 6.0.8-1 (sid), upstream 6.0.8 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-3619). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3621-linux",
@@ -893,11 +971,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability was found in Linux Kernel. It has been classified as problematic. Affected is the function nilfs_bmap_lookup_at_level of the file fs/nilfs2/inod. fix commit 21a87d88c225 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3621). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3624-linux",
@@ -911,11 +992,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability was found in Linux Kernel and classified as problematic. Affected by this issue is the function rlb_arp_xmit of the file drivers/net/bonding/bon. fix commit 4f5d33f4f798 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3624). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3629-linux",
@@ -929,11 +1013,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability was found in Linux Kernel. It has been declared as problematic. This vulnerability affects the function vsock_connect of the file net/vmw_vsock/. fix commit 7e97cfed9929 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3629). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3630-linux",
@@ -947,11 +1034,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability was found in Linux Kernel. It has been rated as problematic. This issue affects some unknown processing of the file fs/fscache/cookie.c of the c. fix commit fb24771faf72 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3630). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3633-linux",
@@ -965,11 +1055,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability classified as problematic has been found in Linux Kernel. Affected is the function j1939_session_destroy of the file net/can/j1939/transport.c. . fix commit 8c21c54a53ab (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3633). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3636-linux",
@@ -983,11 +1076,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability was identified in Linux Kernel 33fc42de33278b2b3ec6f3390512987bc29a62b7. This affects the function __mtk_ppe_check_skb of the file drivers/net/e. fix commit 17a5f6a78dc7 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3636). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-36402-linux",
@@ -1001,11 +1097,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "An integer overflow vulnerability was found in vmwgfx driver in drivers/gpu/vmxgfx/vmxgfx_execbuf.c in GPU component of Linux kernel with device file '/dev/dri/. Debian security tracker: fixed in linux 6.4.13-1 (sid), upstream 6.4.13 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-36402). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "An integer overflow vulnerability was found in vmwgfx driver in drivers/gpu/vmxgfx/vmxgfx_execbuf.c in GPU component of Linux kernel with device file '/dev/dri/. Debian security tracker: fixed in linux 6.4.13-1 (sid), upstream 6.4.13 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-36402). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-3646-linux",
@@ -1019,11 +1118,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A vulnerability, which was classified as problematic, has been found in Linux Kernel. This issue affects the function nilfs_attach_log_writer of the file fs/nil. fix commit d0d51a97063d (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-3646). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-38096-linux",
@@ -1037,11 +1139,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A NULL pointer dereference vulnerability was found in vmwgfx driver in drivers/gpu/vmxgfx/vmxgfx_execbuf.c in GPU component of Linux kernel with device file '/d. Debian security tracker: fixed in linux 6.7.12-1 (sid), upstream 6.7.12 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-38096). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A NULL pointer dereference vulnerability was found in vmwgfx driver in drivers/gpu/vmxgfx/vmxgfx_execbuf.c in GPU component of Linux kernel with device file '/d. Debian security tracker: fixed in linux 6.7.12-1 (sid), upstream 6.7.12 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-38096). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-42895-linux",
@@ -1055,11 +1160,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "There is an infoleak vulnerability in the Linux kernel's net/bluetooth/l2cap_core.c's l2cap_parse_conf_req function which can be used to leak kernel pointers re. fix commit b1a2cd50c035 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2022-42895). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-4382-linux",
@@ -1073,11 +1181,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A use-after-free flaw caused by a race among the superblock operations in the gadgetfs Linux driver was found. It could be triggered by yanking out a device tha. Debian security tracker: fixed in linux 6.1.8-1 (sid), upstream 6.1.8 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-4382). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A use-after-free flaw caused by a race among the superblock operations in the gadgetfs Linux driver was found. It could be triggered by yanking out a device tha. Debian security tracker: fixed in linux 6.1.8-1 (sid), upstream 6.1.8 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2022-4382). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2022-4543-linux",
@@ -1091,12 +1202,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "No practical mitigation; treat KASLR as defeated on KPTI CPUs.",
       "status_notes": "EntryBleed: a prefetch side channel through the KPTI-mapped entry text reveals the KASLR base; no upstream fix. Affects CPUs that use KPTI (Meltdown-vulnerable, mostly Intel); a KASLR bypass only, useful together with another bug. Source: https://cveawg.mitre.org/api/cve/CVE-2022-4543. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-1073-linux",
@@ -1110,11 +1224,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A memory corruption flaw was found in the Linux kernel’s human interface device (HID) subsystem in how a user inserts a malicious USB device. This flaw allows a. Debian security tracker: fixed in linux 6.1.11-1 (sid), upstream 6.1.11 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-1073). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A memory corruption flaw was found in the Linux kernel’s human interface device (HID) subsystem in how a user inserts a malicious USB device. This flaw allows a. Debian security tracker: fixed in linux 6.1.11-1 (sid), upstream 6.1.11 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-1073). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-1074-linux",
@@ -1128,11 +1245,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A memory leak flaw was found in the Linux kernel's Stream Control Transmission Protocol. This issue may occur when a user starts a malicious networking service . fix commit 458e279f861d (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2023-1074). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-1075-linux",
@@ -1146,11 +1266,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in the Linux Kernel. The tls_is_tx_ready() incorrectly checks for list emptiness, potentially accessing a type confused entry to the list_head,. fix commit ffe2a2256244 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2023-1075). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-1076-linux",
@@ -1164,11 +1287,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A flaw was found in the Linux Kernel. The tun/tap sockets have their socket UID hardcoded to 0 due to a type confusion in their initialization function. While i. fix commit 66b2c338adce (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2023-1076). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-2898-linux",
@@ -1182,11 +1308,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "There is a null-pointer-dereference flaw found in f2fs_write_end_io in fs/f2fs/data.c in the Linux kernel. This flaw allows a local privileged user to cause a d. Debian security tracker: fixed in linux 6.4.4-1 (sid), upstream 6.4.4 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-2898). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "There is a null-pointer-dereference flaw found in f2fs_write_end_io in fs/f2fs/data.c in the Linux kernel. This flaw allows a local privileged user to cause a d. Debian security tracker: fixed in linux 6.4.4-1 (sid), upstream 6.4.4 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-2898). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-3397-linux",
@@ -1216,11 +1345,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "x86 cpu_entry_area mapping leak. Red Hat states that the CVE-2023-0597 fix, 97e3d26b5e5f (per-cpu entry area randomization, v6.2, an ancestor of v6.18), also prevents this attack vector. The randomization requires KASLR. Source: https://cveawg.mitre.org/api/cve/CVE-2023-3640. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). [nixos-vex:condition=kaslr-enabled] Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-3772-linux",
@@ -1234,11 +1366,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux kernel’s IP framework for transforming packets (XFRM subsystem). This issue may allow a malicious user with CAP_NET_ADMIN privileg. Debian security tracker: fixed in linux 6.4.13-1 (sid), upstream 6.4.13 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-3772). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux kernel’s IP framework for transforming packets (XFRM subsystem). This issue may allow a malicious user with CAP_NET_ADMIN privileg. Debian security tracker: fixed in linux 6.4.13-1 (sid), upstream 6.4.13 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-3772). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-3773-linux",
@@ -1252,11 +1387,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux kernel’s IP framework for transforming packets (XFRM subsystem). This issue may allow a malicious user with CAP_NET_ADMIN privileg. Debian security tracker: fixed in linux 6.4.13-1 (sid), upstream 6.4.13 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-3773). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux kernel’s IP framework for transforming packets (XFRM subsystem). This issue may allow a malicious user with CAP_NET_ADMIN privileg. Debian security tracker: fixed in linux 6.4.13-1 (sid), upstream 6.4.13 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-3773). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-39176-linux",
@@ -1288,11 +1426,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found within the handling of SMB2 read requests in the kernel ksmbd module. The issue results from the lack of proper validation of user-supplied dat. Debian security tracker: fixed in linux 6.5.3-1 (sid), upstream 6.5.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-39179). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found within the handling of SMB2 read requests in the kernel ksmbd module. The issue results from the lack of proper validation of user-supplied dat. Debian security tracker: fixed in linux 6.5.3-1 (sid), upstream 6.5.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-39179). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-39180-linux",
@@ -1306,11 +1447,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found within the handling of SMB2_READ commands in the kernel ksmbd module. The issue results from not releasing memory after its effective lifetime.. Debian security tracker: fixed in linux 6.5.3-1 (sid), upstream 6.5.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-39180). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found within the handling of SMB2_READ commands in the kernel ksmbd module. The issue results from not releasing memory after its effective lifetime.. Debian security tracker: fixed in linux 6.5.3-1 (sid), upstream 6.5.3 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-39180). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-39810-busybox",
@@ -1352,11 +1496,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in KVM AMD Secure Encrypted Virtualization (SEV) in the Linux kernel. A KVM guest using SEV-ES or SEV-SNP with multiple vCPUs can trigger a dou. Debian security tracker: fixed in linux 6.4.11-1 (sid), upstream 6.4.11 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-4155). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in KVM AMD Secure Encrypted Virtualization (SEV) in the Linux kernel. A KVM guest using SEV-ES or SEV-SNP with multiple vCPUs can trigger a dou. Debian security tracker: fixed in linux 6.4.11-1 (sid), upstream 6.4.11 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-4155). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-51767-openssh",
@@ -1386,13 +1533,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "ALSA: usb-audio: Fix possible NULL pointer dereference in snd_usb_pcm_has_fixed_rate(). CNA record: affected only in 5.15.152..5.15.168; default unaffected. Source: https://cveawg.mitre.org/api/cve/CVE-2023-52904. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
       "status_notes": "Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6176-linux",
@@ -1406,11 +1556,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "A null pointer dereference flaw was found in the Linux kernel API for the cryptographic algorithm scatterwalk functionality. This issue occurs when a user const. fix commit cfaa80c91f6f (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2023-6176). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6238-linux",
@@ -1424,13 +1577,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "NVMe passthrough: the device can write more metadata than the user buffer. Since v6.2, passthrough I/O commands need no CAP_SYS_ADMIN, only a file descriptor on the namespace's device node (nvme_cmd_allowed() in drivers/nvme/host/ioctl.c); admin, vendor-specific and fabrics commands still require CAP_SYS_ADMIN. Unprivileged users cannot open those nodes: the generic character nodes /dev/ngXnY keep the kernel's root-only default (systemd's udev rules assign them no group or mode), and the block nodes belong to root:disk, a root-equivalent group. Upstream mitigated it for SGL-capable controllers in 6fad84a4d624 (v6.13, present in 6.18). Applies only while the nixos-vex condition nvme-nodes-privileged holds: a udev rule in services.udev.extraRules that mentions NVMe nodes removes this statement from the generated feed; rules shipped in services.udev.packages are not inspected. Source: https://cveawg.mitre.org/api/cve/CVE-2023-6238. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Versioned purl: unprivileged passthrough exists from v6.2 on, so the verdict is tied to the version. [nixos-vex:condition=nvme-nodes-privileged] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Versioned purl: unprivileged passthrough exists from v6.2 on, so the verdict is tied to the version. [nixos-vex:condition=nvme-nodes-privileged] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6240-linux",
@@ -1444,12 +1600,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Do not expose RSA PKCS#1 v1.5 decryption through the kernel keyring to untrusted input.",
       "status_notes": "Marvin timing side channel in the kernel's RSA PKCS#1 v1.5 decryption (crypto/rsa-pkcs1pad.c); unfixed upstream. Exploitable only through a service that decrypts attacker-chosen ciphertexts with a private key in the kernel keyring (keyctl pkey_decrypt); stock NixOS has none, but that cannot be checked at evaluation time. Source: https://cveawg.mitre.org/api/cve/CVE-2023-6240. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6535-linux",
@@ -1463,11 +1622,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "A flaw was found in the Linux kernel's NVMe driver. This issue may allow an unauthenticated malicious actor to send a set of crafted TCP packages when using NVM. Debian security tracker: fixed in linux 6.6.15-1 (sid), upstream 6.6.15 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-6535). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "A flaw was found in the Linux kernel's NVMe driver. This issue may allow an unauthenticated malicious actor to send a set of crafted TCP packages when using NVM. Debian security tracker: fixed in linux 6.6.15-1 (sid), upstream 6.6.15 <= 6.18.54 (https://cveawg.mitre.org/api/cve/CVE-2023-6535). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6610-linux",
@@ -1481,11 +1643,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "An out-of-bounds read vulnerability was found in smb2_dump_detail in fs/smb/client/smb2ops.c in the Linux Kernel. This issue could allow a local attacker to cra. fix commit 567320c46a60 (CNA references) is an ancestor of v6.18 (https://cveawg.mitre.org/api/cve/CVE-2023-6610). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-6679-linux",
@@ -1499,11 +1664,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "dpll: NULL dereference in dpll_pin_parent_pin_set(). Fixed upstream by 65c95f78917e (first released in v6.7), an ancestor of v6.18. The vulnerable code existed only in 6.7 release candidates. Source: https://cveawg.mitre.org/api/cve/CVE-2023-6679. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; no stable release since reverts the fix.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2023-7216-cpio",
@@ -1721,11 +1889,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "functionfs: fix the open/removal races. fix e5bf5ee26663 backported in 6.18.7 (ChangeLog-6.18.7); the CNA record lists no 6.18 entry [vexlint:watch_record=2026-08-05T12:11:53.356Z] (https://cveawg.mitre.org/api/cve/CVE-2025-71074). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2025-71289-linux",
@@ -1739,11 +1910,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "fs/ntfs3: handle attr_set_size() errors when truncating files. CNA record: unaffected from 6.18.34 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2025-71289). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2025-71306-linux",
@@ -1757,13 +1931,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "IMA: stack out-of-bounds in is_bprm_creds_for_exec(). The function is in security/integrity/ima/ima_appraise.c, built only with CONFIG_IMA_APPRAISE, which is not set in the nixpkgs kernel config. Source: https://cveawg.mitre.org/api/cve/CVE-2025-71306. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2025-71308-linux",
@@ -1777,12 +1954,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.4; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"amdxdna\" ];",
-      "status_notes": "amdxdna: NULL pointer dereference in context cleanup. Built as a module (amdxdna) that loads only for AMD NPUs (XDNA). Source: https://cveawg.mitre.org/api/cve/CVE-2025-71308. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "amdxdna: NULL pointer dereference in context cleanup. Built as a module (amdxdna) that loads only for AMD NPUs (XDNA). Source: https://cveawg.mitre.org/api/cve/CVE-2025-71308. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2025-71313-linux",
@@ -1796,13 +1976,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "PCI: endpoint: Add missing NULL check for alloc_workqueue(). drivers/pci/endpoint/functions/pci-epf-ntb.c: needs CONFIG_PCI_EPF_NTB (not set); drivers/pci/endpoint/functions/pci-epf-vntb.c: needs CONFIG_PCI_EPF_VNTB (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2025-71313. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-0861-glibc",
@@ -2064,11 +2247,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "cxl/mbox: validate payload size before accessing contents in cxl_payload_from_user_allowed(). CNA record: unaffected from 6.18.34 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-23327). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23328-linux",
@@ -2082,12 +2268,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.7; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"amdxdna\" ];",
-      "status_notes": "amdxdna: NULL pointer dereference of mgmt_chann. Built as a module (amdxdna) that loads only for AMD NPUs (XDNA). Source: https://cveawg.mitre.org/api/cve/CVE-2026-23328. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "amdxdna: NULL pointer dereference of mgmt_chann. Built as a module (amdxdna) that loads only for AMD NPUs (XDNA). Source: https://cveawg.mitre.org/api/cve/CVE-2026-23328. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23371-linux",
@@ -2101,11 +2290,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "sched/deadline: Fix missing ENQUEUE_REPLENISH during PI de-boosting. CNA record: unaffected from 6.18.34 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-23371). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23374-linux",
@@ -2119,13 +2311,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "blktrace: __this_cpu_read/write in preemptible context. The code runs only while the blk tracer is enabled (root, via tracefs) or a blktrace session is set up on an opened block device (root or the disk group). No unprivileged path. Source: https://cveawg.mitre.org/api/cve/CVE-2026-23374. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23377-linux",
@@ -2139,12 +2334,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.7; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ice\" ];",
       "status_notes": "ice: XDP RxQ frag_size taken from the DMA write length instead of xdp.frame_sz. Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-23377. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23442-linux",
@@ -2158,11 +2356,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "ipv6: add NULL checks for idev in SRv6 paths. CNA record: unaffected from 6.18.25 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-23442). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-23459-linux",
@@ -2176,11 +2377,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "ip_tunnel: adapt iptunnel_xmit_stats() to NETDEV_PCPU_STAT_DSTATS. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-23459). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-26157-busybox",
@@ -2222,11 +2426,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "bridge: mrp: reject zero test interval to avoid OOM panic. CNA record: unaffected from 6.18.34 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-31420). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31501-linux",
@@ -2240,13 +2447,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "net: ti: icssg-prueth: fix use-after-free of CPPI descriptor in RX path. drivers/net/ethernet/ti/icssg/icssg_common.c: needs CONFIG_TI_ICSSG_PRUETH (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-31501. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31560-linux",
@@ -2260,11 +2470,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "spi: spi-dw-dma: fix print error log when wait finish transaction. CNA record: unaffected from 6.18.34 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-31560). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31589-linux",
@@ -2278,11 +2491,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "mm: call ->free_folio() directly in folio_unmap_invalidate(). CNA record: unaffected from 6.18.27 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-31589). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31709-linux",
@@ -2296,11 +2512,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "smb: client: validate the whole DACL before rewriting it in cifsacl. CNA record: unaffected from 6.18.35 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-31709). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31771-linux",
@@ -2314,12 +2533,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.12; no 6.18 backport yet). If Bluetooth is not used, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"bluetooth\" ];",
-      "status_notes": "Bluetooth hci_event: wake reason stored outside the validated event handlers. Built as a module (bluetooth). Reachable on systems with a Bluetooth controller, through events from the controller and remote devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-31771. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Bluetooth hci_event: wake reason stored outside the validated event handlers. Built as a module (bluetooth). Reachable on systems with a Bluetooth controller, through events from the controller and remote devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-31771. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-31777-linux",
@@ -2333,12 +2555,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.12; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"snd-ctxfi\" ];",
-      "status_notes": "ALSA ctxfi: unchecked error in index mapping. Built as a module (snd-ctxfi) that loads only for Creative X-Fi sound cards. Source: https://cveawg.mitre.org/api/cve/CVE-2026-31777. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ALSA ctxfi: unchecked error in index mapping. Built as a module (snd-ctxfi) that loads only for Creative X-Fi sound cards. Source: https://cveawg.mitre.org/api/cve/CVE-2026-31777. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-3184-util-linux",
@@ -2522,11 +2747,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "bpf: Fix incorrect pruning due to atomic fetch precision tracking. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-43009). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43022-linux",
@@ -2540,12 +2768,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.12; no 6.18 backport yet). If Bluetooth is not used, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"bluetooth\" ];",
-      "status_notes": "Bluetooth hci_sync: hci_cmd_sync_queue_once() must return -EEXIST if the command exists. Built as a module (bluetooth). Reachable on systems with a Bluetooth controller. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43022. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Bluetooth hci_sync: hci_cmd_sync_queue_once() must return -EEXIST if the command exists. Built as a module (bluetooth). Reachable on systems with a Bluetooth controller. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43022. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43042-linux",
@@ -2559,12 +2790,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.12; no 6.18 backport yet). Until then: blacklist the module if unused (boot.blacklistedKernelModules = [ \"mpls_router\" ];), or disable unprivileged user namespaces (security.allowUserNamespaces = false; this breaks rootless containers and some browser sandboxes).",
       "status_notes": "mpls: seqcount protecting the platform_label/platform_labels pair. Built as a module (mpls_router). Reachable by any local user: unprivileged user namespaces are enabled by default (security.allowUserNamespaces = true), so an unprivileged process can configure this in its own network namespace. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43042. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43045-linux",
@@ -2578,13 +2812,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "mshv: error handling in mshv_region_pin(). Neither drivers/hv/mshv_regions.c nor mshv_region_pin() exists in 6.18.54; the 6.18 equivalents in drivers/hv/mshv_root_main.c already advance by the pinned count and unpin on error. The CNA record's affected range (from 6.15) does not match the 6.18 code layout. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43045. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: drivers/hv/mshv_regions.c still does not exist and drivers/hv/mshv_root_main.c is unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43053-linux",
@@ -2608,16 +2845,19 @@
         "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-43095",
         "name": "CVE-2026-43095"
       },
-      "last_updated": "2026-10-09T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z",
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "The flaw is that SDCA interrupts requested with devm_request_threaded_irq() from component probe (sdca_irq_populate() in sound/soc/sdca/sdca_interrupts.c) outlive a torn-down sound card. Upstream, the only caller is the SDCA class function driver (sound/soc/sdca/sdca_class_function.c), which 6.18 does not have: the 6.18.55 sound/soc/sdca/Makefile builds no such file, and no driver in the 6.18.55 tree calls sdca_irq_populate(), sdca_irq_request() or sdca_irq_allocate(), so the IRQs are never requested. The fix ('ASoC: SDCA: Fix errors in IRQ cleanup', mainline 4e53116437e9, 6.19.14) is not in 6.18.55. Sources: https://cveawg.mitre.org/api/cve/CVE-2026-43095, https://git.kernel.org/stable/c/4e53116437e919c4b9a9d95fb73ae14fe0cfc8f9.",
-      "status_notes": "Depends on what nixpkgs' kernel builds (an added out-of-tree or patched SDCA driver could call it). [nixos-vex:condition=stock-kernel]"
+      "status_notes": "Depends on what nixpkgs' kernel builds (an added out-of-tree or patched SDCA driver could call it). [nixos-vex:condition=stock-kernel] Later versions in products: re-checked at 6.18.56: the SDCA code is unchanged and no driver gains a call to sdca_irq_populate(), sdca_irq_request() or sdca_irq_allocate()."
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43115-linux",
@@ -2631,13 +2871,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "srcu: Use irq_work to start GP in tiny SRCU. kernel/rcu/srcutiny.c: needs CONFIG_TINY_SRCU (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43115. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43131-linux",
@@ -2651,13 +2894,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "drm/amd/pm: Fix null pointer dereference issue. CNA record: unaffected before 6.19 (introduced later). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43131. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
       "status_notes": "Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43174-linux",
@@ -2671,13 +2917,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "io_uring zcrx: post-open error handling. Registering a zero-copy receive queue requires capable(CAP_NET_ADMIN) in the initial user namespace (io_uring/zcrx.c), so user namespaces do not grant it. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43174. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: io_uring/zcrx.c changes only the receive path (io_zcrx_recv_skb(), io_zcrx_tcp_recvmsg()); registering a zero-copy receive queue still requires capable(CAP_NET_ADMIN).",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43191-linux",
@@ -2691,12 +2940,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.6; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"amdgpu\" ];",
-      "status_notes": "amd/display: PHY FSM transition to TX_EN-to-PLL_ON. Built as a module (amdgpu) that loads only for AMD GPUs. The display code (DRM_AMD_DC=y) is part of the amdgpu module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43191. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "amd/display: PHY FSM transition to TX_EN-to-PLL_ON. Built as a module (amdgpu) that loads only for AMD GPUs. The display code (DRM_AMD_DC=y) is part of the amdgpu module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43191. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43204-linux",
@@ -2710,13 +2962,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "ASoC: qcom: q6asm: drop DSP responses for closed data streams. sound/soc/qcom/qdsp6/q6asm.c: needs CONFIG_SND_SOC_QDSP6_ASM (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43204. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43228-linux",
@@ -2778,13 +3033,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "media: verisilicon: Avoid G2 bus error while decoding H.264 and HEVC. drivers/media/platform/verisilicon/hantro_drv.c: needs CONFIG_VIDEO_HANTRO (not set); drivers/media/platform/verisilicon/imx8m_vpu_hw.c: needs CONFIG_VIDEO_HANTRO_IMX8M (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43310. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43311-linux",
@@ -2798,13 +3056,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "soc/tegra: pmc: Fix unsafe generic_handle_irq() call. drivers/soc/tegra/pmc.c: needs CONFIG_SOC_TEGRA_PMC (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-43311. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43326-linux",
@@ -2818,13 +3079,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "sched_ext: SCX_KICK_WAIT deadlock. Requires a loaded sched_ext BPF scheduler, which only root (CAP_BPF and CAP_PERFMON for STRUCT_OPS) can load; none is loaded by default. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43326. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43344-linux",
@@ -2838,11 +3102,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "perf/x86/intel/uncore: Fix die ID init and look up bugs. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-43344). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43391-linux",
@@ -2856,11 +3123,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "nsfs: tighten permission checks for handle opening. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-43391). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43414-linux",
@@ -2874,12 +3144,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.9; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"qla2xxx\" ];",
-      "status_notes": "qla2xxx: fcport double free. Built as a module (qla2xxx) that loads only for QLogic Fibre Channel HBAs. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43414. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "qla2xxx: fcport double free. Built as a module (qla2xxx) that loads only for QLogic Fibre Channel HBAs. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43414. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-43443-linux",
@@ -2893,12 +3166,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.9; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"snd-acp-mach\" ];",
-      "status_notes": "ASoC amd acp-mach-common: missing error check for clock acquisition. Built as a module (snd-acp-mach) that loads only for AMD ACP audio. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43443. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ASoC amd acp-mach-common: missing error check for clock acquisition. Built as a module (snd-acp-mach) that loads only for AMD ACP audio. Source: https://cveawg.mitre.org/api/cve/CVE-2026-43443. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-45897-linux",
@@ -2912,11 +3188,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "netfilter: nft_counter: serialize reset with spinlock. CNA record: unaffected from 6.18.42 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-45897). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-45901-linux",
@@ -2930,11 +3209,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "netfilter: nf_tables: revert commit_mutex usage in reset path. CNA record: unaffected from 6.18.42 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-45901). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-45945-linux",
@@ -2948,11 +3230,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "iommu/vt-d: Fix race condition during PASID entry replacement. CNA record: unaffected from 6.18.39 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-45945). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-45961-linux",
@@ -2982,11 +3267,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "ASoC: nau8821: Cancel delayed work on component remove. CNA record: unaffected from 6.18.49 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-45963). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-45991-linux",
@@ -3016,13 +3304,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "DAMON: damos_walk() vs kdamond_fn() exit race. damos_walk() is called only from the DAMON sysfs interface, whose attributes are root-only (0600); the built-in DAMON modules (reclaim, lru_sort, stat) are disabled by default. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46008. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: mm/damon/core.c changes only scheme application (damos_skip_charged_region(), damos_adjust_quota()); damos_walk() and the root-only DAMON sysfs files are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46017-linux",
@@ -3036,12 +3327,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix, or boot with transparent_hugepage=never.",
       "status_notes": "mm: deferred split queue races during migration. Reachable by any local user (madvise(MADV_HUGEPAGE) plus move_pages/mbind); the effect is a WARN and a folio dropped from the deferred split queue (memory efficiency, not memory safety). No 6.18 backport yet. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46017. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46032-linux",
@@ -3055,12 +3349,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.4; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"kvm-amd\" ];",
-      "status_notes": "KVM nSVM: triple fault when restoring host CR3 fails on nested #VMEXIT. Built as a module (kvm-amd) that loads only for AMD CPUs with SVM. Reachable by guests only while virtual machines with nested virtualization run. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46032. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "KVM nSVM: triple fault when restoring host CR3 fails on nested #VMEXIT. Built as a module (kvm-amd) that loads only for AMD CPUs with SVM. Reachable by guests only while virtual machines with nested virtualization run. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46032. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46054-linux",
@@ -3074,11 +3371,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "selinux: fix overlayfs mmap() and mprotect() access checks. CNA record: unaffected from 6.18.38 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-46054). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46092-linux",
@@ -3092,11 +3392,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "wifi: rtw88: check for PCI upstream bridge existence. CNA record: unaffected from 6.18.27 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-46092). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46130-linux",
@@ -3110,11 +3413,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "dm-verity-fec: fix reading parity bytes split across blocks (take 3). CNA record: unaffected from 6.18.42 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-46130). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46153-linux",
@@ -3128,12 +3434,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.7; no 6.18 backport yet). Until then: blacklist the module if unused (boot.blacklistedKernelModules = [ \"8021q\" ];), or disable unprivileged user namespaces (security.allowUserNamespaces = false; this breaks rootless containers and some browser sandboxes).",
       "status_notes": "8021q: cleared egress QoS mappings not deleted. Built as a module (8021q). Reachable by any local user: unprivileged user namespaces are enabled by default (security.allowUserNamespaces = true), so an unprivileged process can configure this in its own network namespace. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46153. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46203-linux",
@@ -3147,11 +3456,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "spi: cadence-quadspi: fix unclocked access on unbind. CNA record: unaffected from 6.18.36 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-46203). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46210-linux",
@@ -3165,13 +3477,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "media: iris: fix use-after-free of fmt_src during MBPF check. drivers/media/platform/qcom/iris/iris_vdec.c: needs CONFIG_VIDEO_QCOM_IRIS (not set); drivers/media/platform/qcom/iris/iris_venc.c: needs CONFIG_VIDEO_QCOM_IRIS (not set); drivers/media/platform/qcom/iris/iris_vidc.c: needs CONFIG_VIDEO_QCOM_IRIS (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-46210. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46245-linux",
@@ -3185,12 +3500,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.4; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"amdgpu\" ];",
-      "status_notes": "amd/display: dc_link NULL handling in HPD init. Built as a module (amdgpu) that loads only for AMD GPUs. The display code (DRM_AMD_DC=y) is part of the amdgpu module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46245. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "amd/display: dc_link NULL handling in HPD init. Built as a module (amdgpu) that loads only for AMD GPUs. The display code (DRM_AMD_DC=y) is part of the amdgpu module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46245. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46252-linux",
@@ -3204,11 +3522,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "regulator: core: fix locking in regulator_resolve_supply() error path. CNA record: unaffected from 6.18.37 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-46252). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46298-linux",
@@ -3222,13 +3543,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "pseries/papr-hvpipe: Fix race with interrupt handler. all program files are under non-x86 arch/ trees: arch/powerpc/platforms/pseries/papr-hvpipe.c. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46298. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux.",
-      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the program files are still powerpc-only and unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46302-linux",
@@ -3258,12 +3582,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.9; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"amdgpu\" ];",
-      "status_notes": "amdgpu: access to a stale wptr mapping in user queues. Built as a module (amdgpu) that loads only for AMD GPUs. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46311. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "amdgpu: access to a stale wptr mapping in user queues. Built as a module (amdgpu) that loads only for AMD GPUs. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46311. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-46330-linux",
@@ -3277,12 +3604,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 6.19.4; no 6.18 backport yet). Few systems need this protocol; blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"smc\" ];",
-      "status_notes": "smc: TCP ULP support (reverted upstream). Built as a module (smc). Reachable by any local user: socket(AF_SMC) autoloads the module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46330. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "smc: TCP ULP support (reverted upstream). Built as a module (smc). Reachable by any local user: socket(AF_SMC) autoloads the module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-46330. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-52949-linux",
@@ -3296,12 +3626,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ttm\" ];",
-      "status_notes": "ttm: infinite LRU walk in ttm_bo_shrink() on backup failure. Built as a module (ttm) that loads only for GPUs whose driver uses TTM (amdgpu, radeon, nouveau, xe, and virtual GPUs such as qxl and vmwgfx). Source: https://cveawg.mitre.org/api/cve/CVE-2026-52949. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ttm: infinite LRU walk in ttm_bo_shrink() on backup failure. Built as a module (ttm) that loads only for GPUs whose driver uses TTM (amdgpu, radeon, nouveau, xe, and virtual GPUs such as qxl and vmwgfx). Source: https://cveawg.mitre.org/api/cve/CVE-2026-52949. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-52956-linux",
@@ -3347,12 +3680,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ttm\" ];",
-      "status_notes": "ttm: infinite LRU walk in ttm_bo_swapout() on swapout failure. Built as a module (ttm) that loads only for GPUs whose driver uses TTM (amdgpu, radeon, nouveau, xe, and virtual GPUs such as qxl and vmwgfx). Source: https://cveawg.mitre.org/api/cve/CVE-2026-52965. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ttm: infinite LRU walk in ttm_bo_swapout() on swapout failure. Built as a module (ttm) that loads only for GPUs whose driver uses TTM (amdgpu, radeon, nouveau, xe, and virtual GPUs such as qxl and vmwgfx). Source: https://cveawg.mitre.org/api/cve/CVE-2026-52965. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-52988-linux",
@@ -3381,11 +3717,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "af_unix: Drop all SCM attributes for SOCKMAP.. CNA record: unaffected from 6.18.40 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53005). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53007-linux",
@@ -3399,12 +3738,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ice\" ];",
-      "status_notes": "ice: NULL pointer dereference in the error path of ice_set_ringparam(). Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53007. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ice: NULL pointer dereference in the error path of ice_set_ringparam(). Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53007. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53008-linux",
@@ -3418,12 +3760,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ice\" ];",
-      "status_notes": "ice: race in TX timestamp ring cleanup. Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53008. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ice: race in TX timestamp ring cleanup. Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53008. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53009-linux",
@@ -3437,12 +3782,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ice\" ];",
-      "status_notes": "ice: double free of tx_buf skb. Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53009. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ice: double free of tx_buf skb. Built as a module (ice) that loads only for Intel E800-series Ethernet adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53009. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53017-linux",
@@ -3472,12 +3820,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"gb-raw\" ];",
       "status_notes": "greybus raw: use-after-free if write is called after disconnect. Built as a module (gb-raw) that loads only for Greybus devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53024. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53025-linux",
@@ -3491,12 +3842,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"gb-raw\" ];",
-      "status_notes": "greybus raw: use-after-free on cdev close. Built as a module (gb-raw) that loads only for Greybus devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53025. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "greybus raw: use-after-free on cdev close. Built as a module (gb-raw) that loads only for Greybus devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53025. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53027-linux",
@@ -3510,11 +3864,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "fs/ntfs3: fix missing run load for vcn0 in attr_data_get_block_locked(). CNA record: unaffected from 6.18.39 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53027). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53078-linux",
@@ -3528,11 +3885,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "bpf: Fix same-register dst/src OOB read and pointer leak in sock_ops. CNA record: unaffected from 6.18.42 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53078). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53089-linux",
@@ -3546,11 +3906,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "bpf: Fix use-after-free in offloaded map/prog info fill. CNA record: unaffected from 6.18.49 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53089). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53090-linux",
@@ -3564,11 +3927,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "bpf: Fix ld_{abs,ind} failure path analysis in subprogs. CNA record: unaffected from 6.18.42 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53090). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53091-linux",
@@ -3582,12 +3948,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix.",
       "status_notes": "net: qdisc_pkt_len_init() reads GSO headers without pulling them. Crafted GSO packets need tun or AF_PACKET with a vnet header (available in an unprivileged user namespace), and an impact only through NIC drivers that copy headers from skb->data. No 6.18 backport yet. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53091. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53102-linux",
@@ -3601,11 +3970,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "wifi: mt76: Fix memory leak after mt76_connac_mcu_alloc_sta_req(). CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53102). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53106-linux",
@@ -3619,13 +3991,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "bpf: deleting local storage from NMI context. Requires a tracing or perf_event BPF program (CAP_BPF and CAP_PERFMON); unprivileged BPF is disabled by default (CONFIG_BPF_UNPRIV_DEFAULT_OFF=y), and the program types available without privilege cannot run in NMI context. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53106. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b).",
-      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53108-linux",
@@ -3639,13 +4014,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "powerpc/64s: Fix unmap race with PMD migration entries. all program files are under non-x86 arch/ trees: arch/powerpc/mm/book3s64/pgtable.c. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53108. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux.",
-      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the program files are still powerpc-only and unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53113-linux",
@@ -3659,11 +4037,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "wifi: ath11k: fix memory leaks in beacon template setup. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53113). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53124-linux",
@@ -3677,12 +4058,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). Do not grant non-root users access to /dev/ublk-control.",
-      "status_notes": "ublk: per-IO canceled flag not reset on each fetch. Built as a module (ublk_drv). Reachable only through /dev/ublk-control, which is root-only unless an administrator grants access. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53124. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ublk: per-IO canceled flag not reset on each fetch. Built as a module (ublk_drv). Reachable only through /dev/ublk-control, which is root-only unless an administrator grants access. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53124. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53178-linux",
@@ -3696,11 +4080,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "staging: rtl8723bs: rtw_mlme: add bounds checks before ie_length subtraction. CNA record: unaffected from 6.18.52 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53178). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53222-linux",
@@ -3714,12 +4101,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.13; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"ptp_ocp\" ];",
-      "status_notes": "ptp ocp: resource freeing order. Built as a module (ptp_ocp) that loads only for OCP TimeCard devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53222. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "ptp ocp: resource freeing order. Built as a module (ptp_ocp) that loads only for OCP TimeCard devices. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53222. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53232-linux",
@@ -3733,11 +4123,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "net: phy: clean the sfp upstream if phy probing fails. CNA record: unaffected from 6.18.36 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53232). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53257-linux",
@@ -3751,12 +4144,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.13; no 6.18 backport yet). If Wi-Fi is not used, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"cfg80211\" ];",
-      "status_notes": "cfg80211: HE/EHT capability and operation consistency not enforced. Built as a module (cfg80211). Reachable on systems with Wi-Fi hardware, through nl80211 (AP configuration). Source: https://cveawg.mitre.org/api/cve/CVE-2026-53257. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "cfg80211: HE/EHT capability and operation consistency not enforced. Built as a module (cfg80211). Reachable on systems with Wi-Fi hardware, through nl80211 (AP configuration). Source: https://cveawg.mitre.org/api/cve/CVE-2026-53257. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53260-linux",
@@ -3770,11 +4166,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "tcp: Add preempt_{disable,enable}_nested() in reqsk_queue_hash_req().. CNA record: unaffected from 6.18.40 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53260). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53285-linux",
@@ -3788,12 +4187,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.10; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"amdgpu\" ];",
-      "status_notes": "amd/display: DCN32 phantom-plane allocation outside DC_RUN_WITH_PREEMPTION_ENABLED. Built as a module (amdgpu) that loads only for AMD GPUs. The display code (DRM_AMD_DC=y) is part of the amdgpu module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53285. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "amd/display: DCN32 phantom-plane allocation outside DC_RUN_WITH_PREEMPTION_ENABLED. Built as a module (amdgpu) that loads only for AMD GPUs. The display code (DRM_AMD_DC=y) is part of the amdgpu module. Source: https://cveawg.mitre.org/api/cve/CVE-2026-53285. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53292-linux",
@@ -3801,15 +4203,19 @@
         "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-53292",
         "name": "CVE-2026-53292"
       },
-      "last_updated": "2026-10-09T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z",
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
-      "impact_statement": "The BUG_ON() is in pn_socket_autobind() in net/phonet/socket.c (phonet module, CONFIG_PHONET=m), reached from sendmsg on a Phonet socket. pn_socket_create() in net/phonet/af_phonet.c refuses to create Phonet sockets without CAP_SYS_ADMIN in the initial user namespace (capable()), so only root can reach the assertion, and root can crash the kernel anyway. No 6.18.y release up to 6.18.55 carries the fix; upstream fixed it in 7.0.10 and mainline commit 5b0c911bcdbd (CNA record https://cveawg.mitre.org/api/cve/CVE-2026-53292)."
+      "impact_statement": "The BUG_ON() is in pn_socket_autobind() in net/phonet/socket.c (phonet module, CONFIG_PHONET=m), reached from sendmsg on a Phonet socket. pn_socket_create() in net/phonet/af_phonet.c refuses to create Phonet sockets without CAP_SYS_ADMIN in the initial user namespace (capable()), so only root can reach the assertion, and root can crash the kernel anyway. No 6.18.y release up to 6.18.55 carries the fix; upstream fixed it in 7.0.10 and mainline commit 5b0c911bcdbd (CNA record https://cveawg.mitre.org/api/cve/CVE-2026-53292).",
+      "status_notes": "Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged."
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53308-linux",
@@ -3817,16 +4223,19 @@
         "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-53308",
         "name": "CVE-2026-53308"
       },
-      "last_updated": "2026-10-09T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z",
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "The workqueue leak and removal-order use-after-free are in drivers/power/supply/max77705_charger.c (CONFIG_CHARGER_MAX77705=m), the charger cell of the Maxim MAX77705 PMIC found in ARM phones. The charger is instantiated only as a child of the max77705 I2C MFD device, and both drivers match only device-tree compatibles (maxim,max77705 and maxim,max77705-charger); x86_64 systems describe hardware through ACPI, so the driver never probes. No 6.18.y release up to 6.18.55 carries the fix; upstream fixed it in 7.0.10 and mainline commit 1e668baadefb (CNA record https://cveawg.mitre.org/api/cve/CVE-2026-53308).",
-      "status_notes": "[nixos-vex:condition=x86-64]"
+      "status_notes": "[nixos-vex:condition=x86-64] Later versions in products: re-checked at 6.18.56: the charger and MFD drivers are unchanged and still match only device-tree compatibles."
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53313-linux",
@@ -3840,11 +4249,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "drm/amd/display: Avoid NULL dereference in dc_dmub_srv error paths. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-53313). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-53401-linux",
@@ -3858,13 +4270,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "fbdev: omap2: fix use-after-free in omapfb_mmap. drivers/video/fbdev/omap2/omapfb/omapfb-main.c: needs CONFIG_FB_OMAP2 (not set). Source: https://cveawg.mitre.org/api/cve/CVE-2026-53401. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: the same upstream data gives the same verdict for them. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-55199-libssh2",
@@ -4156,11 +4571,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "netfs: Fix missing locking around retry adding new subreqs. CNA record: unaffected from 6.18.50 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-64068). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64079-linux",
@@ -4174,13 +4592,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "netfilter x_tables: hook ops allocated outside the table mutex. xt_hook_ops_alloc() is compiled into x_tables, but its only callers are the legacy table modules (iptable_filter/mangle/raw/security, ip6table_filter/mangle/raw/security, arptable_filter). The nixpkgs kernel is built without CONFIG_NETFILTER_XTABLES_LEGACY, so none of those modules exists; iptables-nft uses nft_compat, which does not call it. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64079. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: x_tables is unchanged, xt_hook_ops_alloc() gains no caller and CONFIG_NETFILTER_XTABLES_LEGACY is still not set.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64082-linux",
@@ -4194,11 +4615,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "riscv: Fix register corruption from uninitialized cregs on error. CNA record: unaffected from 6.18.49 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-64082). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64117-linux",
@@ -4212,12 +4636,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.11; no 6.18 backport yet). If Wi-Fi is not used, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"mac80211\" ];",
-      "status_notes": "mac80211: fast-RX rate captured after mesh reuses skb->cb. Built as a module (mac80211). Reachable on systems with Wi-Fi hardware in mesh mode, through received frames. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64117. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "mac80211: fast-RX rate captured after mesh reuses skb->cb. Built as a module (mac80211). Reachable on systems with Wi-Fi hardware in mesh mode, through received frames. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64117. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64123-linux",
@@ -4231,12 +4658,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.0.11; no 6.18 backport yet). Until then: blacklist the module if unused (boot.blacklistedKernelModules = [ \"hsr\" ];), or disable unprivileged user namespaces (security.allowUserNamespaces = false; this breaks rootless containers and some browser sandboxes).",
-      "status_notes": "hsr: node table freed before RCU readers finish. Built as a module (hsr). Reachable by any local user: unprivileged user namespaces are enabled by default (security.allowUserNamespaces = true), so an unprivileged process can configure this in its own network namespace. A fix exists on older stable branches (6.12.93, 6.6.143 and earlier) but not on 6.18. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64123. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "hsr: node table freed before RCU readers finish. Built as a module (hsr). Reachable by any local user: unprivileged user namespaces are enabled by default (security.allowUserNamespaces = true), so an unprivileged process can configure this in its own network namespace. A fix exists on older stable branches (6.12.93, 6.6.143 and earlier) but not on 6.18. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64123. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64146-linux",
@@ -4266,13 +4696,16 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "drm/msm adreno: reference leak in a6xx_gpu_init(). The msm DRM driver (Qualcomm Adreno GPUs on ARM SoCs) is not built: CONFIG_DRM_MSM does not appear in the x86_64 kernel config and no msm DRM module exists in the build. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64154. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Applies only while the system is x86_64-linux and runs nixpkgs' default kernel unmodified, whose build configuration this verdict rests on.",
-      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "[nixos-vex:condition=x86-64] [nixos-vex:condition=stock-kernel] Later versions in products: re-checked; the code and kernel config this verdict rests on are unchanged. Later versions in products: re-checked at 6.18.56: the code is unchanged and its Kconfig symbols are still not set in nixpkgs' kernel config.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64159-linux",
@@ -4318,11 +4751,14 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
       "status_notes": "net/mlx5e: xsk: Fix unlocked writing to ICOSQ. CNA record: unaffected from 6.18.52 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-64210). nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: the same upstream data gives the same verdict for them.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64283-linux",
@@ -4336,12 +4772,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix. Until then restrict /dev/kvm (a udev rule setting GROUP=\"kvm\", MODE=\"0660\"), or blacklist the modules if no VMs run: boot.blacklistedKernelModules = [ \"kvm_intel\" \"kvm_amd\" ];",
-      "status_notes": "KVM guest_memfd: memslot binding offset+size treated as signed, bypassing the bounds check. Reachable by any local user on hardware with VT-x or AMD-V: kvm_intel/kvm_amd autoload from CPU features and systemd's udev rules make /dev/kvm mode 0666. No 6.18 backport yet. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64283. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "KVM guest_memfd: memslot binding offset+size treated as signed, bypassing the bounds check. Reachable by any local user on hardware with VT-x or AMD-V: kvm_intel/kvm_amd autoload from CPU features and systemd's udev rules make /dev/kvm mode 0666. No 6.18 backport yet. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64283. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64325-linux",
@@ -4355,12 +4794,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.1.4; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"mt7921e\", \"mt7925e\" ];",
-      "status_notes": "mt76 mt7921/mt7925: NULL dereference in CSA beacon handling. Built as a module (mt7921e, mt7925e) that loads only for MediaTek MT7921/MT7925 Wi-Fi adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64325. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "status_notes": "mt76 mt7921/mt7925: NULL dereference in CSA beacon handling. Built as a module (mt7921e, mt7925e) that loads only for MediaTek MT7921/MT7925 Wi-Fi adapters. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64325. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet. Later versions in products: the same upstream data gives the same verdict for them.",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64341-linux",
@@ -4374,12 +4816,15 @@
         },
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "affected",
       "action_statement": "Update once the 6.18 branch receives the fix (fixed upstream in 7.1.4; no 6.18 backport yet). If this hardware is not present, blacklisting the module removes the attack surface: boot.blacklistedKernelModules = [ \"iowarrior\" ];",
       "status_notes": "USB iowarrior: use-after-free on disconnect race. Built as a module (iowarrior) that loads only for Code Mercenaries IO-Warrior USB devices. A fix exists on 6.12 (6.12.97) but not on 6.18. Source: https://cveawg.mitre.org/api/cve/CVE-2026-64341. nixpkgs ships Linux 6.18.54 at the pinned nixpkgs revision (c59305b). Later versions in products: carried forward; their stable ChangeLogs contain no fix yet.",
-      "last_updated": "2026-10-06T00:00:00Z"
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64388-linux",
@@ -4765,11 +5210,15 @@
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "fixed",
-      "status_notes": "netfilter: nf_tables: join hook list via splice_list_rcu() in commit phase. CNA record: unaffected from 6.18.55 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-52988). nixpkgs ships Linux 6.18.55 at the pinned nixpkgs revision (151fa4e).",
-      "timestamp": "2026-10-06T00:00:00Z"
+      "status_notes": "netfilter: nf_tables: join hook list via splice_list_rcu() in commit phase. CNA record: unaffected from 6.18.55 on the 6.18.* branch (https://cveawg.mitre.org/api/cve/CVE-2026-52988). nixpkgs ships Linux 6.18.55 at the pinned nixpkgs revision (151fa4e). Later versions in products: the same upstream data gives the same verdict for them.",
+      "timestamp": "2026-10-06T00:00:00Z",
+      "last_updated": "2026-10-16T00:00:00Z"
     },
     {
       "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-84782-openssl",
@@ -5006,12 +5455,275 @@
       "products": [
         {
           "@id": "pkg:nix/linux@6.18.55"
+        },
+        {
+          "@id": "pkg:nix/linux@6.18.56"
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "bpf: zero extend the result of an arena 32-bit cmpxchg. Present in Linux 6.18.55 (is_cmpxchg_insn() in kernel/bpf/verifier.c matches BPF_ATOMIC only) and not yet fixed on the 6.18 branch (fixed in 7.2.7 per https://cveawg.mitre.org/api/cve/CVE-2026-98049). Only reachable from a BPF program that uses an arena map, and creating an arena map requires CAP_BPF (or a BPF token an administrator delegated) in map_create() in kernel/bpf/syscall.c, whatever kernel.unprivileged_bpf_disabled says; NixOS grants CAP_BPF to no service by default. nixpkgs ships Linux 6.18.55 at the pinned nixpkgs revision (e7439b6).",
-      "timestamp": "2026-10-08T00:00:00Z"
+      "timestamp": "2026-10-08T00:00:00Z",
+      "status_notes": "Later versions in products: re-checked at 6.18.56: the files with the vulnerable code and its privilege gate are unchanged.",
+      "last_updated": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64013-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-64013",
+        "name": "CVE-2026-64013"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "ACPI: button: Fix ACPI GPE handler leak during removal. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-64013. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64019-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-64019",
+        "name": "CVE-2026-64019"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "nvme-pci: fix dma mapping leak on data setup error. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-64019. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-64020-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-64020",
+        "name": "CVE-2026-64020"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "nvme-pci: fix dma_vecs leak on p2p memory. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-64020. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-98131-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-98131",
+        "name": "CVE-2026-98131"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "net: stmmac: fix dma mapping leak in stmmac_tso_xmit(). CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-98131. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-98134-linux",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-98134",
+        "name": "CVE-2026-98134"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/linux@6.18.56"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to the fixed 6.18 stable release named in the CNA record (not packaged by nixpkgs at the pinned revision).",
+      "status_notes": "bpf: check_cond_jmp_op(): properly infer if register is null. CNA record: fixed on the 6.18.* branch only from 6.18.57. CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-98134. nixpkgs ships Linux 6.18.56 at the pinned nixpkgs revision (55bfb4d).",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106552-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106552",
+        "name": "CVE-2026-106552"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, do not use recursive sftp downloads (get -R) from untrusted servers.",
+      "status_notes": "sftp(1) client: a malicious server can return paths that make a recursive download write outside the target directory. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106553-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106553",
+        "name": "CVE-2026-106553"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "sshd(8): credentials from a failed GSSAPIAuthentication attempt can persist and become available after a later successful authentication. The GSSAPI authentication code in sshd (auth2-gss.c, gss-serv.c) is compiled only when GSSAPI is defined, which configure does only with --with-kerberos5. The nixpkgs openssh package is built without --with-kerberos5, so sshd has no GSSAPIAuthentication. nixpkgs builds Kerberos support only into the separate openssh-with-gssapi package. Applies only while the nixos-vex condition sshd-no-gssapi holds: an sshd built with GSSAPI/Kerberos support removes this statement from the generated feed. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html).",
+      "status_notes": "Versionless purl deliberate: the verdict rests on a build option of the nixpkgs package, which the sshd-no-gssapi condition checks at evaluation, not on the version. [nixos-vex:condition=sshd-no-gssapi]",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106555-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106555",
+        "name": "CVE-2026-106555"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "sshd(8): GSSAPIAuthentication state from one attempt can carry over to a later attempt. The GSSAPI authentication code in sshd (auth2-gss.c, gss-serv.c) is compiled only when GSSAPI is defined, which configure does only with --with-kerberos5. The nixpkgs openssh package is built without --with-kerberos5, so sshd has no GSSAPIAuthentication. nixpkgs builds Kerberos support only into the separate openssh-with-gssapi package. Applies only while the nixos-vex condition sshd-no-gssapi holds: an sshd built with GSSAPI/Kerberos support removes this statement from the generated feed. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html).",
+      "status_notes": "Versionless purl deliberate: the verdict rests on a build option of the nixpkgs package, which the sshd-no-gssapi condition checks at evaluation, not on the version. [nixos-vex:condition=sshd-no-gssapi]",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106582-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106582",
+        "name": "CVE-2026-106582"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, disable compression where sessions mix trusted and untrusted traffic: services.openssh.settings.Compression = false; for sshd, and Compression no in programs.ssh.extraConfig for the client (the client default is already no).",
+      "status_notes": "ssh(1), sshd(8): with compression enabled, the shared LZ77 dictionary leaks plaintext of one channel to an attacker who controls traffic on another channel of the same session. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106583-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106583",
+        "name": "CVE-2026-106583"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, do not pass usernames from untrusted sources to ssh on the command line; set them with the User directive (programs.ssh.extraConfig) instead.",
+      "status_notes": "ssh(1) client: '$' and '\\' in a username given on the command line can inject shell syntax through ProxyCommand, Match exec and similar %-expansions. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106584-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106584",
+        "name": "CVE-2026-106584"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, give certificate validity intervals in UTC (ssh-keygen -V with times ending in Z).",
+      "status_notes": "ssh-keygen(1): Daylight Saving Time is mishandled when converting dates, so certificates can get an expiry off by up to an hour. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106585-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106585",
+        "name": "CVE-2026-106585"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, disable compression: services.openssh.settings.Compression = false; for sshd, and keep the client default (Compression no).",
+      "status_notes": "ssh(1), sshd(8): decompression does not check that inflated payloads stay within the maximum packet length. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106586-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106586",
+        "name": "CVE-2026-106586"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, keep PermitTunnel at its default (no); NixOS does not set it.",
+      "status_notes": "sshd(8): the authorized_keys restrict keyword did not disable tunnel forwarding. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-106587-openssh",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-106587",
+        "name": "CVE-2026-106587"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/openssh@10.5p1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to OpenSSH 10.6 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump). Until then, do not override such options with none inside Match blocks in services.openssh.extraConfig.",
+      "status_notes": "sshd(8): some options documented to accept none (e.g. AuthorizedPrincipalsFile) treat it as a file name when set inside a Match block. Fixed upstream in OpenSSH 10.6 (release notes: https://www.openssh.org/releasenotes.html); nixpkgs applies no fix to 10.5p1.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-19445-python3",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-19445",
+        "name": "CVE-2026-19445"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/python3@3.14.7"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to CPython 3.14.8 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump).",
+      "status_notes": "ssl: use-after-free of a server-side SSLContext when an sni_callback switches SSLSocket.context and nothing else keeps the original context alive. The PSF CNA record bounds 3.14 as affected < 3.14.8; nixpkgs applies no fix to 3.14.7. At the pinned revision python3 is referenced by nixos-rebuild-ng and systemd-boot's installer script, but the interpreter is not asserted unused.",
+      "timestamp": "2026-10-16T00:00:00Z"
+    },
+    {
+      "@id": "https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-19553-python3",
+      "vulnerability": {
+        "@id": "https://nvd.nist.gov/vuln/detail/CVE-2026-19553",
+        "name": "CVE-2026-19553"
+      },
+      "products": [
+        {
+          "@id": "pkg:nix/python3@3.14.7"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to CPython 3.14.8 or later (nixpkgs has not packaged it at the pinned revision; candidate nixpkgs version bump).",
+      "status_notes": "ssl: SSLContext.wrap_bio() skips hostname verification without error when server_hostname is None although check_hostname is set. The PSF CNA record bounds 3.14 as affected < 3.14.8; nixpkgs applies no fix to 3.14.7. At the pinned revision python3 is referenced by nixos-rebuild-ng and systemd-boot's installer script, but the interpreter is not asserted unused.",
+      "timestamp": "2026-10-16T00:00:00Z"
     }
   ]
 }
