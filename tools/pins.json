@@ -1,9 +1,9 @@
 {
-  "cpedictRev": "9f1c729740916a9a4d0b321e056e376cf1c4edc7",
+  "cpedictRev": "593a639a3380dcb4dc244ea5cbc3d4e9cb6c5805",
   "grypeDb": {
-    "url": "https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-10-08T00:34:19Z_1791441227.tar.zst",
-    "hash": "sha256-O1vYlAd+8GmxIzmd54LV3x5RPBkXJVoU8tCGImNQ1fQ=",
-    "built": "2026-10-08T06:33:47Z",
-    "name": "grype-db-v6.1.10-2026-10-08"
+    "url": "https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-10-16T00:28:12Z_1792132191.tar.zst",
+    "hash": "sha256-mYXSsw3HKO6ilB0j59ei4E2uvWXFCpWcYTaoWJJ1Frk=",
+    "built": "2026-10-16T06:29:51Z",
+    "name": "grype-db-v6.1.10-2026-10-16"
   }
 }

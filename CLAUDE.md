@@ -79,6 +79,10 @@ nix develop .#ci -c basedpyright                           # after EVERY Python 
   `zizmor`. The cycle: daily alert → branch → `make bump` → triage skill
   (`make triage`, sign-off, apply) → PR with `reports/triage-baseline.md` →
   gates → merge.
+- **One triage round is one PR, one commit per batch** (bump and SBOM,
+  carry-forward, kernel classes, each group of AI verdicts), so each batch
+  can be reviewed on its own. The PR is squash-merged, so main moves from
+  zero to zero in one commit.
 
 ## Statement conventions
 
