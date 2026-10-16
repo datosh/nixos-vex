@@ -1,0 +1,31 @@
+name: Wrong verdict
+description: A statement in the feed is wrong, or a condition holds when it should not.
+labels: [feed]
+body:
+  - type: input
+    id: statement
+    attributes:
+      label: Statement
+      description: The statement `@id`, e.g. https://github.com/datosh/nixos-vex/blob/main/vex/baseline.openvex.json#CVE-2026-12345-linux
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: Which part is wrong (status, justification, purl/version, condition) and what it should be.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: CNA record, a fix commit, a ChangeLog, nixpkgs source at the shipped version, ...
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration
+      description: If a condition is involved, the relevant part of your NixOS configuration and your nixpkgs revision.
+      render: nix

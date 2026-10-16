@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability in nixos-vex
+    url: https://github.com/datosh/nixos-vex/security/advisories/new
+    about: Private report. For wrong verdicts in the feed, create a public issue.
+  - name: Ask a question
+    url: https://github.com/datosh/nixos-vex/discussions
+    about: Using the module, reading the feed, does my configuration keep a statement?
